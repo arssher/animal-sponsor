@@ -12,6 +12,7 @@ class Sponsor
 public:
 	Sponsor(std::string _name, int _experience) : name(_name), animals(), experience(_experience) {}
 	~Sponsor(void);
-	void Add(std::string _animal);
+	void Add(std::string _animal) { animals.Add(_animal); }
+	bool IsAnimalHere(std::string _animal) const { return animals.IsAnimalHere(_animal); }
 };
 

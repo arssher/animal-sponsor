@@ -19,3 +19,15 @@ void AnimalList::Add(std::string _animal)
 	tmp->next = first;
 	first = tmp;
 }
+
+bool AnimalList::IsAnimalHere(std::string _animal) const
+{
+	Animal* tmp = first;
+	while(tmp)
+	{
+		if (tmp->name == _animal)
+			return true;
+		tmp = tmp->next;
+	}
+	return false;
+}

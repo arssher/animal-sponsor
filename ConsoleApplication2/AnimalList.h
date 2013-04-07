@@ -15,5 +15,6 @@ public:
 	AnimalList() {first = 0;}
 	~AnimalList();
 	void Add(std::string _animal);
+	bool IsAnimalHere(std::string _animal) const;
 };
 
