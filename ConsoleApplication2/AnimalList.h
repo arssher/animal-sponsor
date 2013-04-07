@@ -1,8 +1,19 @@
 #pragma once
+
+#include "cstdio"
+#include "string"
+
 class AnimalList
 {
+	struct Animal
+	{
+		std::string name;
+		Animal* next;
+	};
+	Animal* first;
 public:
-	AnimalList(void);
-	~AnimalList(void);
+	AnimalList() {first = 0;}
+	~AnimalList();
+	void Add(std::string _animal);
 };
 

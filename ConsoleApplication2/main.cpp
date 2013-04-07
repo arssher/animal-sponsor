@@ -3,9 +3,7 @@
 
 int main()
 {
-	char stroka[10];
-	stroka[2] = 'c';
-	delete stroka;
-	printf("%s\n", stroka);
+	Sponsor jew("Shmulinson", 50);
+	jew.Add("Elephant");
 	return 0;
 }

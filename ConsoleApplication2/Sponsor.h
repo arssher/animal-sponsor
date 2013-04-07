@@ -6,11 +6,12 @@
 
 class Sponsor
 {
-	char* name;
+	std::string name;
 	AnimalList animals;
 	int experience;
 public:
-	Sponsor(void);
+	Sponsor(std::string _name, int _experience) : name(_name), animals(), experience(_experience) {}
 	~Sponsor(void);
+	void Add(std::string _animal);
 };
 
