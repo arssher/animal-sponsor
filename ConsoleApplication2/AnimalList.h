@@ -14,7 +14,8 @@ class AnimalList
 public:
 	AnimalList() {first = 0;}
 	~AnimalList();
-	void Add(std::string _animal);
+	void AddAnimal(std::string _animal);
+	int RemoveAnimal(std::string _animal);
 	bool IsAnimalHere(std::string _animal) const;
 };
 

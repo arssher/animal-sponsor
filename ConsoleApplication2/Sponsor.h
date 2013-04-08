@@ -1,8 +1,9 @@
 #pragma once
 
 #include "AnimalList.h"
-#include <string>;
-#include <cstdio>;
+#include <string>
+#include <cstdio>
+#include <iostream>
 
 class Sponsor
 {
@@ -12,7 +13,9 @@ class Sponsor
 public:
 	Sponsor(std::string _name, int _experience) : name(_name), animals(), experience(_experience) {}
 	~Sponsor(void);
-	void Add(std::string _animal) { animals.Add(_animal); }
+	void AddAnimal(std::string _animal) { animals.AddAnimal(_animal); }
+	int RemoveAnimal(std::string _animal) { return animals.RemoveAnimal(_animal); }
 	bool IsAnimalHere(std::string _animal) const { return animals.IsAnimalHere(_animal); }
+	void 
 };
 

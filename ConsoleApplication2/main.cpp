@@ -4,8 +4,9 @@
 int main()
 {
 	Sponsor jew("Shmulinson", 50);
-	jew.Add("Elephant");
-	jew.Add("Tiger");
-	bool a = jew.IsAnimalHere("Elepha");
+	jew.AddAnimal("Elephant");
+	jew.AddAnimal("Tiger");
+	int a = jew.IsAnimalHere("Elepha");
+	jew.RemoveAnimal("Elephant");
 	return 0;
 }
