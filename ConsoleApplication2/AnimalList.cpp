@@ -78,3 +78,30 @@ std::ostream& operator<<(std::ostream& out, const AnimalList& animals)
 	}
 	return out;
 }
+
+void AnimalList::operator=(const AnimalList& animals)
+{
+	if (animals.first == NULL)
+	{
+		first = NULL;
+	}
+	else
+	{
+		Animal* tmp = animals.first;
+		Animal* tmpResult;
+		first = new Animal;
+		first->name = tmp->name;
+		first->next = tmp->next;
+		tmp = tmp->next;
+		tmpResult = first;
+		while(tmp)
+		{
+			tmpResult->next = new Animal;
+			tmpResult = tmpResult->next;
+			tmpResult->name = tmp->name;
+			tmpResult->next = NULL;
+
+			tmp = tmp->next;
+		}
+	}
+}

@@ -10,6 +10,5 @@ int main()
 	std::cout << jew;
 	int a = jew.IsAnimalHere("Elepha");
 	jew.RemoveAnimal("Elephant");
-
 	return 0;
 }
