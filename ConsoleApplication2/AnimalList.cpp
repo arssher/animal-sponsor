@@ -67,3 +67,14 @@ bool AnimalList::IsAnimalHere(std::string _animal) const
 	}
 	return false;
 }
+
+std::ostream& operator<<(std::ostream& out, const AnimalList& animals)
+{
+	AnimalList::Animal* tmp = animals.first;
+	while (tmp)
+	{
+		out << tmp->name << "\n";
+		tmp = tmp->next;
+	}
+	return out;
+}

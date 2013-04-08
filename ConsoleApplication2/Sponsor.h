@@ -16,6 +16,6 @@ public:
 	void AddAnimal(std::string _animal) { animals.AddAnimal(_animal); }
 	int RemoveAnimal(std::string _animal) { return animals.RemoveAnimal(_animal); }
 	bool IsAnimalHere(std::string _animal) const { return animals.IsAnimalHere(_animal); }
-	void 
+	friend std::ostream& operator<<(std::ostream& out, const Sponsor& sponsor);
 };
 
