@@ -80,11 +80,13 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="AnimalList.cpp" />
+    <ClCompile Include="GoldSponsor.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="Sponsor.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="AnimalList.h" />
+    <ClInclude Include="GoldSponsor.h" />
     <ClInclude Include="Sponsor.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

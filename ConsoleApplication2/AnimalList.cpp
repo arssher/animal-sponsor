@@ -81,6 +81,7 @@ std::ostream& operator<<(std::ostream& out, const AnimalList& animals)
 
 void AnimalList::operator=(const AnimalList& animals)
 {
+	this->~AnimalList();
 	if (animals.first == NULL)
 	{
 		first = NULL;
@@ -104,4 +105,9 @@ void AnimalList::operator=(const AnimalList& animals)
 			tmp = tmp->next;
 		}
 	}
+}
+
+AnimalList::AnimalList(const AnimalList& animals) //not tested
+{
+	*this = animals;
 }

@@ -24,12 +24,18 @@
     <ClCompile Include="AnimalList.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="GoldSponsor.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Sponsor.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="AnimalList.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="GoldSponsor.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

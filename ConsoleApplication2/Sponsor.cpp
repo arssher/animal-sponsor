@@ -11,9 +11,10 @@ Sponsor::Sponsor(const Sponsor& _sponsor)
 	animals = _sponsor.animals;
 }
 
-std::ostream& operator<<(std::ostream& out, const Sponsor sponsor)
+void Sponsor::operator=(const Sponsor& _sponsor)
 {
-	out << "Sponsor " << sponsor.name << ", experience " << sponsor.experience << "\n";
-	out << sponsor.animals;
-	return out;
+	this->~Sponsor();
+	name = _sponsor.name;
+	experience = _sponsor.experience;
+	animals = _sponsor.animals;
 }
