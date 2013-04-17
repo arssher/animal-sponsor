@@ -3,7 +3,12 @@
 
 AnimalList::~AnimalList()
 {
-	while(first)
+  DeleteAll();
+}
+
+void AnimalList::DeleteAll()
+{
+  while(first)
 	{
 		Animal* tmp = first;
 		first = first->next;
@@ -81,7 +86,7 @@ std::ostream& operator<<(std::ostream& out, const AnimalList& animals)
 
 void AnimalList::operator=(const AnimalList& animals)
 {
-	this->~AnimalList();
+	this->DeleteAll();
 	if (animals.first == NULL)
 	{
 		first = NULL;

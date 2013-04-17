@@ -16,10 +16,12 @@ public:
 	Sponsor(std::string _name, int _experience) : name(_name), animals(), experience(_experience) {}
 	virtual ~Sponsor(void);
 	Sponsor(const Sponsor& _sponsor);
-	void operator=(const Sponsor& _sponsor);
 	void AddAnimal(std::string _animal) { animals.AddAnimal(_animal); }
 	int RemoveAnimal(std::string _animal) { return animals.RemoveAnimal(_animal); }
 	bool IsAnimalHere(std::string _animal) const { return animals.IsAnimalHere(_animal); }
 	virtual void Donate(int amount) = 0;
+	friend std::ostream& operator<<(std::ostream& out, Sponsor* sponsorptr);
+  virtual std::ostream& Print(std::ostream& out);
+  void operator=(const Sponsor& _sponsor);
 };
 

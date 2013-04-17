@@ -1,20 +1,35 @@
 #include "Sponsor.h"
 #include "GoldSponsor.h"
-#include <vld.h>
+#include "BrilliantSponsor.h"
 
 int main()
 {
-	GoldSponsor jew("Shmulinson", 50);
-	jew.AddAnimal("Elephant");
-	jew.AddAnimal("Tiger");
-	jew.AddAnimal("Bear");
-	std::cout << jew;
-	int a = jew.IsAnimalHere("Elepha");
-	jew.RemoveAnimal("Elephant");
+	GoldSponsor genius("Dmitry Kristev", 500);
+  Sponsor* sponsorptr = &genius;
+	GoldSponsor vitaly("Vitaly Bubyakin", 400);
+  Sponsor* sponsorptr2 = &vitaly;
+  
+  genius.AddAnimal("Deer");
+  genius.AddAnimal("Bear");
+  genius.AddAnimal("Snake");
 
-	GoldSponsor oriental("Dada", 20);
-	oriental = jew;
-	jew = oriental;
-	oriental = jew;
+  genius.RemoveAnimal("Bear");
+
+  vitaly.AddAnimal("Tiger");
+
+  sponsorptr->Donate(100);
+  sponsorptr2->Donate(200);
+
+	std::cout << genius;
+	std::cout << vitaly;
+  
+  genius = vitaly;
+	std::cout << genius;
+
+  GoldSponsor test = genius;
+	std::cout << test;
+  
+  std::cout << sponsorptr;
+
 	return 0;
 }
